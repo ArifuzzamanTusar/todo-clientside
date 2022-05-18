@@ -1,0 +1,77 @@
+.login-reg {
+    min-height: 90vh;
+    background-image: url("https://res.cloudinary.com/tusar/image/upload/b_rgb:000000,o_41/v1651865943/gpu-point/17048219_gpba0u.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white
+  }
+  
+  
+  .form-body {
+    padding: 50px;
+  
+    /* From https://css.glass */
+    background: rgba(46, 46, 46, 0.418);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* form  */
+  
+  label,
+  input {
+    display: block;
+    width: 100%;
+  }
+  .form-body input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    
+  }
+  label{
+    margin-top: 20px;
+  }
+  .Log_in {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .social-login {
+    border: 1px solid #ffffff;
+    padding: 10px 15px;
+    border-radius: 100px;
+    cursor: pointer;
+  }
+  .social-login:hover {
+    background: #0b5ed7;
+  }
+  .hasError{
+    border-bottom: 1px solid #ff2525 !important;
+  }
+  .errorText{
+    color: #ff2525;
+    font-weight: bold;
+  }
+  
+  @keyframes spinner {
+      0%{
+          transform: rotate(0deg);
+      }
+      100%{
+          transform: rotate(3600deg);
+      }
+  }

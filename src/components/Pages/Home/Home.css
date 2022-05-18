@@ -1,0 +1,28 @@
+.check {
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #045c5c;
+  margin: 0px 20px;
+  color: #045c5c;
+  cursor: pointer;
+}
+.completed .task-details {
+  text-decoration: line-through;
+}
+.completed .task {
+  background: #f1f1f1;
+}
+
+.check.active {
+  background: #045c5c;
+  color: #ffffff;
+}
+
+/* Phones to tablets 767px and below */
+@media screen and (max-width: 767px) {
+  /* write code here */
+}

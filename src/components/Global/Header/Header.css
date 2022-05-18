@@ -1,0 +1,14 @@
+.nav-link{
+    color: rgba(255, 255, 255, 0.548) !important;
+
+}
+.nav-link.active{
+    color: #ffffff !important;
+   
+}
+.dropdown-menu{
+    background: rgb(0, 54, 54);
+}
+.dropdown-item:hover{
+    background:rgb(0, 37, 37); ;
+}
