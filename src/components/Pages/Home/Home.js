@@ -79,37 +79,44 @@ const Home = () => {
                 <Row>
                     <Col md={8}>
 
+                    
                         {
-                            tasks.map(task =>
-                                <div key={task._id} className={task.completed ? 'tasks completed' : 'tasks'}>
-                                  
-                                    <div className="task rounded my-3 p-2 shadow-sm d-flex justify-content-between align-items-center">
-
-                                        <div onClick={() => handleDoneTask(task._id)} className="task-inner d-flex align-items-center ">
-                                            <div className={task.completed ? 'check active' : 'check'}>
-                                                <FaCheck />
-                                            </div>
-                                            <div className="task-details ">
-                                                <div className="task-name">
-                                                    <h5>{task.title} </h5>
+                            tasks.length > 0
+                            ?
+                                tasks.map(task =>
+                                    <div key={task._id} className={task.completed ? 'tasks completed' : 'tasks'}>
+                                      
+                                        <div className="task rounded my-3 p-2 shadow-sm d-flex justify-content-between align-items-center">
+    
+                                            <div onClick={() => handleDoneTask(task._id)} className="task-inner d-flex align-items-center ">
+                                                <div className={task.completed ? 'check active' : 'check'}>
+                                                    <FaCheck />
                                                 </div>
-                                                <div className="task-disc">
-                                                    <p> {task.description}</p>
+                                                <div className="task-details ">
+                                                    <div className="task-name">
+                                                        <h5>{task.title} </h5>
+                                                    </div>
+                                                    <div className="task-disc">
+                                                        <p> {task.description}</p>
+                                                    </div>
                                                 </div>
+    
                                             </div>
-
+                                            <div className="action">
+                                                <Button onClick={() => handleDoneTask(task._id)} className='mx-2' variant="primary" size="md" active  disabled={task.completed}>
+                                                {task.completed ? 'Completed' : 'Complete'}
+                                                </Button>
+                                                <Button onClick={() => handleDeleteTask(task._id)} variant="outline-danger"> <FaTrashAlt /> </Button>
+                                            </div>
                                         </div>
-                                        <div className="action">
-                                            <Button onClick={() => handleDoneTask(task._id)} className='mx-2' variant="primary" size="md" active  disabled={task.completed}>
-                                            {task.completed ? 'Completed' : 'Complete'}
-                                            </Button>
-                                            <Button onClick={() => handleDeleteTask(task._id)} variant="outline-danger"> <FaTrashAlt /> </Button>
-                                        </div>
+    
                                     </div>
+    
+                                )
 
-                                </div>
-
-                            )
+                            :
+                            <h4 className='py-5 text-center'>No Tasks Found</h4>
+                           
                         }
 
                     </Col>
@@ -120,7 +127,7 @@ const Home = () => {
 
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                     <Form.Label>Task Title</Form.Label>
-                                    <Form.Control name='title' type="text" placeholder="name@example.com" />
+                                    <Form.Control name='title' type="text" placeholder="i.e Take Breakfast" />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                                     <Form.Label>Discription</Form.Label>
