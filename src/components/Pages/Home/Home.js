@@ -29,7 +29,7 @@ const Home = () => {
         const title = event.target.title.value;
         const description = event.target.description.value;
         const task = { email: user?.email, title, description, completed: false };
-        const url = "http://localhost:5000/task";
+        const url = "https://tusar-todo.herokuapp.com/task";
 
         const { data } = await axios.post(url, task);
         if (data.insertedId) {
@@ -41,13 +41,13 @@ const Home = () => {
 
     const getData = async () => {
         const email = user?.email;
-        const url = `http://localhost:5000/task?email=${email}`;
+        const url = `https://tusar-todo.herokuapp.com/task?email=${email}`;
         const { data } = await axios.get(url);
         setTasks(data);
         setIsLoading(false)
     }
     const handleDoneTask = async (id) => {
-        const url = `http://localhost:5000/task/${id}`;
+        const url = `https://tusar-todo.herokuapp.com/task/${id}`;
         const { data } = await axios.put(url);
         if (data.modifiedCount) {
             toast.success('Task Completed');
@@ -56,7 +56,7 @@ const Home = () => {
     }
 
     const handleDeleteTask = async (id) => {
-        const url = `http://localhost:5000/task/${id}`;
+        const url = `https://tusar-todo.herokuapp.com/task/${id}`;
         console.log(url)
         const { data } = await axios.delete(url);
         if (data.deletedCount) {
