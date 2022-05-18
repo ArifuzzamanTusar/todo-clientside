@@ -25,4 +25,20 @@
 /* Phones to tablets 767px and below */
 @media screen and (max-width: 767px) {
   /* write code here */
+  .task-inner {
+      width: 100%;
+  }
+  .action{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+  }
+  .task{
+      flex-wrap: wrap;
+  }
+  .task-details {
+      max-width: 70%;
+      overflow-y: hidden;
+      overflow-x: auto;
+  }
 }
