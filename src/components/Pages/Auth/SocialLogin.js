@@ -28,7 +28,7 @@ const SocialLogin = () => {
       if (user) {
         const email = user?.user.email;
         const fetchLogin = async () => {
-            const {data} = await axios.post('https://floating-tundra-94246.herokuapp.com/login', {email});
+            const {data} = await axios.post('https://tusar-todo.herokuapp.com/login', {email});
             localStorage.setItem('accessToken', data.accessToken);
         }
         fetchLogin();

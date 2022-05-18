@@ -6,12 +6,12 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCPHNZhkLtJePm8INZo6RfSZJLb1LSU88Q",
-    authDomain: "gpu-point.firebaseapp.com",
-    projectId: "gpu-point",
-    storageBucket: "gpu-point.appspot.com",
-    messagingSenderId: "853210324526",
-    appId: "1:853210324526:web:3225c4ce6993407ea949bf"
+    apiKey: "AIzaSyDp8AgmVQ_2zRLSYDVEPuZB7X2zFrjuDzk",
+  authDomain: "todo-tusar.firebaseapp.com",
+  projectId: "todo-tusar",
+  storageBucket: "todo-tusar.appspot.com",
+  messagingSenderId: "651821423567",
+  appId: "1:651821423567:web:9733e2c0a0e7cdaff2d0ba"
 };
 
 // Initialize Firebase
